@@ -4,14 +4,27 @@ import PropTypes from "prop-types";
 export function Card(props) {
 	return (
 		<>
-			<div class="card" style={{width: "300px"}}>
-  <img class="card-img-top" src="..." alt="Card image cap"/>
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's {""}content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+			<div className="card" style={{ width: "300px" }}>
+				<img
+					className="card-img-top"
+					src={props.imgUrl}
+					alt="Card image cap"
+				/>
+
+				<div className="card-body">
+					<h5 className="card-title">{props.title}</h5>
+					<p className="card-text">{props.body}</p>
+					<a href={props.imgUrl} className="btn btn-primary" />
+				</div>
+			</div>
 		</>
 	);
 }
+
+Card.propTypes = {
+	imgUrl: PropTypes.string,
+	title: PropTypes.string,
+	body: PropTypes.string,
+    link: PropTypes.string,
+    buttonColor: PropTypes.string
+};
