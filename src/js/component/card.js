@@ -10,12 +10,12 @@ export function Card(props) {
 					src={props.imgUrl}
 					alt="Card image cap"
 				/>
+			</div>
 
-				<div className="card-body">
-					<h5 className="card-title">{props.title}</h5>
-					<p className="card-text">{props.body}</p>
-					<a href={props.imgUrl} className="btn btn-primary" />
-				</div>
+			<div className="card-body">
+				<h5 className="card-title">{props.title}</h5>
+				<p className="card-text">{props.body}</p>
+				<a href={props.imgUrl} className="btn btn-primary" />
 			</div>
 		</>
 	);
@@ -25,6 +25,6 @@ Card.propTypes = {
 	imgUrl: PropTypes.string,
 	title: PropTypes.string,
 	body: PropTypes.string,
-    link: PropTypes.string,
-    buttonColor: PropTypes.string
+	link: PropTypes.string,
+	buttonColor: PropTypes.string
 };
