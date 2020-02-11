@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar } from "./navbar";
 import { Card } from "./card";
+import { Navbarone } from "./navbarone";
 
 //include images into your bundle
 import mscommunity from "../../img/mscommunity.jpg";
@@ -13,7 +14,8 @@ export function Home(props) {
 	return (
 		<>
 			<Navbar />
-			<div className="text-center mt-5">
+			<Navbarone />
+			<div className="text-center mt-5 bg-image">
 				<div className="d-flex justify-content-around">
 					<Card
 						imgUrl={mscommunity}
@@ -21,6 +23,7 @@ export function Home(props) {
 						body={
 							"Free, fully featured IDE for students, open-source and individual developers"
 						}
+						buttonText={"Free Trial"}
 					/>
 
 					<Card
@@ -29,6 +32,7 @@ export function Home(props) {
 						body={
 							"Professional developer tools, services, and subscription benefits for small teams "
 						}
+						buttonText={"Free Download"}
 					/>
 					<Card
 						imgUrl={vsenterprise}
@@ -36,6 +40,7 @@ export function Home(props) {
 						body={
 							"End-to-end solution to meet demanding quality and scale needs of teams of all sizes "
 						}
+						buttonText={"Free Trial"}
 					/>
 					<Card
 						imgUrl={code}
@@ -43,6 +48,7 @@ export function Home(props) {
 						body={
 							"Code editing,redefined. Free, open source, and runs everywhere "
 						}
+						buttonText={"Free Download"}
 					/>
 				</div>
 			</div>

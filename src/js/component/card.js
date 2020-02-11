@@ -13,7 +13,9 @@ export function Card(props) {
 				<div className="card-body">
 					<h5 className="card-title">{props.title}</h5>
 					<p className="card-text">{props.body}</p>
-					<a href={props.imgUrl} className="btn btn-primary" />
+					<a href={props.imgUrl} className="btn btn-primary">
+						{props.buttonText}
+					</a>
 				</div>
 			</div>
 		</>
@@ -25,5 +27,6 @@ Card.propTypes = {
 	title: PropTypes.string,
 	body: PropTypes.string,
 	link: PropTypes.string,
-	buttonColor: PropTypes.string
+	buttonColor: PropTypes.string,
+	buttonText: PropTypes.string
 };
